@@ -8,8 +8,9 @@ function delay(time){
     return new Promise((resolve,rejects) => {
         if(isNaN(time)){
             rejects(new Error('delay required  a valid number'))
-        }
+        }else { // to reject we can use return
         setTimeout(resolve, time);
+        }
     });
 }
 
